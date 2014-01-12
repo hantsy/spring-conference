@@ -1,4 +1,4 @@
-package com.hantsylabs.example.conference.config;
+package com.hantsylabs.example.conference;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

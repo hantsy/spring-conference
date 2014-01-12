@@ -32,8 +32,8 @@ public class ApplicationConversionServiceFactoryBean extends
 			public String convert(Conference conference) {
 				return new StringBuilder().append(conference.getName())
 						.append(' ').append(conference.getDescription())
-						.append(' ').append(conference.getStartedDate())
-						.append(' ').append(conference.getEndedDate())
+						.append(' ').append(conference.getDuration().getStart())
+						.append(' ').append(conference.getDuration().getEnd())
 						.toString();
 			}
 		};
