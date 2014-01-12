@@ -1,5 +1,6 @@
 package com.hantsylabs.example.conference.model;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -12,9 +13,11 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
-public class User extends AbstractPersistable<Long>{
+public class User extends AbstractPersistable<Long> implements UserDetails{
 
 	@NotNull
 	private String firstName;
@@ -31,12 +34,9 @@ public class User extends AbstractPersistable<Long>{
 	@NotNull
 	private String password;
 
-	// @NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(style = "M-")
 	private Date createdDate;
-
-
 
 	public String getFirstName() {
 		return this.firstName;
@@ -90,6 +90,41 @@ public class User extends AbstractPersistable<Long>{
 	public String toString() {
 		return ReflectionToStringBuilder.toString(this,
 				ToStringStyle.SHORT_PREFIX_STYLE);
+	}
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getUsername() {
+		return this.email;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 
 }
