@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>com.hantsylabs.example.spring</groupId>
 		<artifactId>conference-server-parent</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>${app.version}</version>
 		<relativePath>../</relativePath>
 	</parent>
 	<dependencies>
