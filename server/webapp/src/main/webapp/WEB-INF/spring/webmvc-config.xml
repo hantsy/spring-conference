@@ -85,7 +85,7 @@
 	</bean>
 
 	<!-- Enable this for integration of file upload functionality -->
-	<!-- <bean
+	<bean
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		id="multipartResolver" />
 	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver"
@@ -98,13 +98,13 @@
 		<property name="definitions">
 			<list>
 				<value>/WEB-INF/layouts/layouts.xml</value>
-				Scan views directory for Tiles configurations
+				<!-- Scan views directory for Tiles configurations -->
 				<value>/WEB-INF/views/**/views.xml</value>
 			</list>
 		</property>
-	</bean> -->
+	</bean>
 	<bean
 		class="com.hantsylabs.example.spring.conference.web.ApplicationConversionServiceFactoryBean"
 		id="applicationConversionService" />
-	<!-- <import resource="webflow-config.xml" /> -->
+	<import resource="webflow-config.xml" />
 </beans>
