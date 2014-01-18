@@ -60,18 +60,6 @@ public class ApplicationConversionServiceFactoryBean extends
 		};
 	}
 
-	public Converter<Signup, String> getSignupToStringConverter() {
-		return new org.springframework.core.convert.converter.Converter<com.hantsylabs.example.conference.model.Signup, java.lang.String>() {
-			@Override
-			public String convert(Signup signup) {
-				return new StringBuilder().append(signup.getFirstName())
-						.append(' ').append(signup.getLastName()).append(' ')
-						.append(signup.getEmail()).append(' ')
-						.append(signup.getPhone()).toString();
-			}
-		};
-	}
-
 	public Converter<Long, Signup> getIdToSignupConverter() {
 		return new org.springframework.core.convert.converter.Converter<Long, com.hantsylabs.example.conference.model.Signup>() {
 			@Override
@@ -97,7 +85,6 @@ public class ApplicationConversionServiceFactoryBean extends
 		registry.addConverter(getConferenceToStringConverter());
 		registry.addConverter(getIdToConferenceConverter());
 		registry.addConverter(getStringToConferenceConverter());
-		registry.addConverter(getSignupToStringConverter());
 		registry.addConverter(getIdToSignupConverter());
 		registry.addConverter(getStringToSignupConverter());
 	}
