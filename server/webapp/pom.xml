@@ -14,6 +14,11 @@
 	<dependencies>
 		<!-- General dependencies for standard applications -->
 		<dependency>
+			<groupId>com.hantsylabs.example.spring</groupId>
+			<artifactId>conference-core</artifactId>
+			<version>${app.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>

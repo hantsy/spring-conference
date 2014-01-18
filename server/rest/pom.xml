@@ -12,6 +12,11 @@
 		<relativePath>../</relativePath>
 	</parent>
 	<dependencies>
+		<dependency>
+			<groupId>com.hantsylabs.example.spring</groupId>
+			<artifactId>conference-core</artifactId>
+			<version>${app.version}</version>
+		</dependency>
 		<!-- General dependencies for standard applications -->
 		<dependency>
 			<groupId>junit</groupId>

@@ -10,6 +10,9 @@
 	<description>Conference application server side(POM)</description>
 	<modules>
 		<module>webapp</module>
+		<module>rest</module>
+		<module>core</module>
+		<module>admin</module>
 	</modules>
 	<properties>
 		<app.version>1.0-SNAPSHOT</app.version>

@@ -22,7 +22,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaAuditing
 @EnableJpaRepositories(basePackages = { "com.hantsylabs.example.conference.repository" })
 @EnableTransactionManagement(mode = AdviceMode.ASPECTJ)
-public class DataConfig {
+public class PersistenceConfig {
 
 	@Bean
 	@Profile(value="test")
