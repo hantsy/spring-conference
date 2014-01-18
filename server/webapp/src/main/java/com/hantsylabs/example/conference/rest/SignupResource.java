@@ -17,7 +17,6 @@ import com.hantsylabs.example.conference.service.ConferenceService;
 
 @RequestMapping("/signups")
 @Controller
-// @RooWebScaffold(path = "signups", formBackingObject = Signup.class)
 public class SignupResource {
 
 	@Autowired

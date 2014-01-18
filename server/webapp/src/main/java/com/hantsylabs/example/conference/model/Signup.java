@@ -5,140 +5,38 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Version;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import org.hibernate.validator.constraints.Email;
+import org.springframework.data.jpa.domain.AbstractPersistable;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-public class Signup {
+public class Signup extends AbstractPersistable<Long> {
 
-	@Id
-	private String id;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-	@Version
-	private Integer version;
+	@ManyToOne
+	@JoinColumn(name="user_id")
+	private User user;
 
-	@NotNull
-	private String firstName;
-
-	@NotNull
-	private String lastName;
-
-	@NotNull
-	@Email
-	private String email;
-
-	@NotNull
-	private String phone;
-
-	// @NotNull
-	private String occupation;
-
-	// @NotNull
-	@Size(max = 2000)
-	private String company;
-
-	// @NotNull
-	private String comment;
-
-	// @NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(style = "M-")
 	private Date createdDate;
 
-	// @NotNull
 	@ManyToOne
+	@JoinColumn(name="conference_id")
 	private Conference conference;
 
 	@Enumerated(EnumType.STRING)
 	private Status status;
-
-	@Override
-	public String toString() {
-		return ReflectionToStringBuilder.toString(this,
-				ToStringStyle.SHORT_PREFIX_STYLE);
-	}
-
-	public String getId() {
-		return this.id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public Integer getVersion() {
-		return this.version;
-	}
-
-	public void setVersion(Integer version) {
-		this.version = version;
-	}
-
-	public String getFirstName() {
-		return this.firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return this.lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getEmail() {
-		return this.email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPhone() {
-		return this.phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getOccupation() {
-		return this.occupation;
-	}
-
-	public void setOccupation(String occupation) {
-		this.occupation = occupation;
-	}
-
-	public String getCompany() {
-		return this.company;
-	}
-
-	public void setCompany(String company) {
-		this.company = company;
-	}
-
-	public String getComment() {
-		return this.comment;
-	}
-
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
 
 	public Date getCreatedDate() {
 		return this.createdDate;
@@ -163,4 +61,11 @@ public class Signup {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
+
+	@Override
+	public String toString() {
+		return ReflectionToStringBuilder.toString(this,
+				ToStringStyle.SHORT_PREFIX_STYLE);
+	}
+
 }
