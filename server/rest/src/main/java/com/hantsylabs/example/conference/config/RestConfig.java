@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@ComponentScan(basePackages = { "com.hantsylabs.example" } )
+@ComponentScan(basePackages = { "com.hantsylabs.example.spring.conference" } )
 public class RestConfig {
 
 

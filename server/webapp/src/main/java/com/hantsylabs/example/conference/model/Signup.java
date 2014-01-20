@@ -36,7 +36,7 @@ public class Signup extends AbstractPersistable<Long> {
 	private Conference conference;
 
 	@Enumerated(EnumType.STRING)
-	private Status status;
+	private SignupStatus status;
 
 	public Date getCreatedDate() {
 		return this.createdDate;
@@ -54,11 +54,11 @@ public class Signup extends AbstractPersistable<Long> {
 		this.conference = conference;
 	}
 
-	public Status getStatus() {
+	public SignupStatus getStatus() {
 		return this.status;
 	}
 
-	public void setStatus(Status status) {
+	public void setStatus(SignupStatus status) {
 		this.status = status;
 	}
 
