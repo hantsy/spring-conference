@@ -2,7 +2,7 @@ package com.hantsylabs.example.conference;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class AppBootstrap  extends AbstractAnnotationConfigDispatcherServletInitializer
+public class RestAppBoostrap  extends AbstractAnnotationConfigDispatcherServletInitializer
 
 {
 

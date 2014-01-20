@@ -13,6 +13,7 @@
 		<module>rest</module>
 		<module>core</module>
 		<module>admin</module>
+		<module>util</module>
 	</modules>
 	<properties>
 		<app.version>1.0-SNAPSHOT</app.version>
