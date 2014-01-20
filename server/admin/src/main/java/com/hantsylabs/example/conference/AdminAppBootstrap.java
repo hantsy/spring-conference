@@ -3,13 +3,12 @@ package com.hantsylabs.example.conference;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import com.hantsylabs.example.conference.config.AdminWebConfig;
 import com.hantsylabs.example.conference.config.CoreConfig;
 import com.hantsylabs.example.conference.config.PersistenceConfig;
-import com.hantsylabs.example.conference.config.WebConfig;
-
 
 @Order(1)
-public class WebAppBootstrap  extends AbstractAnnotationConfigDispatcherServletInitializer
+public class AdminAppBootstrap  extends AbstractAnnotationConfigDispatcherServletInitializer
 
 {
 
@@ -20,7 +19,7 @@ public class WebAppBootstrap  extends AbstractAnnotationConfigDispatcherServletI
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] {WebConfig.class};
+		return new Class[] {AdminWebConfig.class};
 	}
 
 	@Override

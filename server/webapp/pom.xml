@@ -19,6 +19,11 @@
 			<version>${app.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>com.hantsylabs.example.spring</groupId>
+			<artifactId>conference-util</artifactId>
+			<version>${app.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>

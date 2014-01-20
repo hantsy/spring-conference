@@ -10,7 +10,7 @@ import javax.persistence.TemporalType;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import static com.hantsylabs.example.conference.Predicates.*;
+import com.hantsylabs.example.conference.util.Predicates;
 
 @Embeddable
 public class Duration implements Serializable{
@@ -30,7 +30,7 @@ public class Duration implements Serializable{
 	public Duration() {}
 	
 	public Duration(Date start) {
-        nonNull(start, "Start must be specified");
+		Predicates.nonNull(start, "Start must be specified");
 
         Calendar cal=Calendar.getInstance();
         cal.setTime(start);
@@ -43,8 +43,8 @@ public class Duration implements Serializable{
     }
 	
 	public Duration(Date start, Date end) {
-        nonNull(start, "Start must be specified");
-        nonNull(end, "End must be specified");
+        Predicates.nonNull(start, "Start must be specified");
+        Predicates.nonNull(end, "End must be specified");
         if (end.before(start)) {
             throw new IllegalArgumentException("End can not be before Start");
         }
