@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.hantsylabs.example.spring</groupId>
-	<artifactId>conference-server-parent</artifactId>
+	<artifactId>conference-parent</artifactId>
 	<packaging>pom</packaging>
 	<version>${app.version}</version>
-	<name>conference-server-parent</name>
+	<name>conference-parent</name>
 	<description>Conference application server side(POM)</description>
 	<modules>
 		<module>webapp</module>
@@ -17,21 +17,21 @@
 	</modules>
 	<properties>
 		<app.version>1.0-SNAPSHOT</app.version>
-		<aspectj.version>1.7.2</aspectj.version>
+		<aspectj.version>1.7.3</aspectj.version>
 		<java.version>1.7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<roo.version>1.2.3.RELEASE</roo.version>
 		<slf4j.version>1.7.2</slf4j.version>
 		<querydsl.version>3.2.2</querydsl.version>
 		<mongo-java-driver.version>2.11.2</mongo-java-driver.version>
-		<spring.version>4.0.0.RELEASE</spring.version>
-		<spring-data-commons.version>1.7.0.M1</spring-data-commons.version>
-		<spring-data-jpa.version>1.5.0.M1</spring-data-jpa.version>
-		<spring-data-mongo.version>1.3.3.RELEASE</spring-data-mongo.version>
-		<spring-data-redis.version>1.1.0.RELEASE</spring-data-redis.version>
+		<spring.version>4.0.1.RELEASE</spring.version>
+		<spring-data-commons.version>1.7.0.RC1</spring-data-commons.version>
+		<spring-data-jpa.version>1.5.0.RC1</spring-data-jpa.version>
+		<spring-data-mongo.version>1.4.0.RC1</spring-data-mongo.version>
+		<spring-data-redis.version>1.1.1.RELEASE</spring-data-redis.version>
 		<spring-webflow.version>2.4.0.M1</spring-webflow.version>
 		<spring-security.version>3.2.0.RELEASE</spring-security.version>
-		<hibernate.version>4.3.0.Final</hibernate.version>
+		<hibernate.version>4.3.1.Final</hibernate.version>
 	</properties>
 	<repositories>
 		<repository>

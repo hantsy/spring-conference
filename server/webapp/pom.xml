@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<parent>
 		<groupId>com.hantsylabs.example.spring</groupId>
-		<artifactId>conference-server-parent</artifactId>
+		<artifactId>conference-parent</artifactId>
 		<version>${app.version}</version>
 		<relativePath>../</relativePath>
 	</parent>

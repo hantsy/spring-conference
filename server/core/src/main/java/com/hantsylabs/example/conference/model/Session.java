@@ -9,7 +9,7 @@ import javax.persistence.OneToMany;
 
 import org.springframework.data.jpa.domain.AbstractAuditable;
 
-public class Presentation extends AbstractAuditable<Presentation, Long>{
+public class Session extends AbstractAuditable<Session, Long> implements Durable{
 	
 	/**
 	 * 

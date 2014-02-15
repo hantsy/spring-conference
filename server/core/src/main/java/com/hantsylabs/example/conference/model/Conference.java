@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.data.jpa.domain.AbstractAuditable;
 
 @Entity
-public class Conference extends AbstractAuditable<Conference, Long> {
+public class Conference  extends AbstractAuditable<Conference, Long> implements Durable {
 
 	/**
 	 * 
