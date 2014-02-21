@@ -3,6 +3,8 @@ spring-conference
 
 A conference and event publishing platform to demonstrate Spring related technologies and RESTful architecture.
 
+**This project is still under construction.**
+
 
 ##Project structure
 
